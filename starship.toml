@@ -17,7 +17,7 @@ success_symbol = "[◎](bold bold bright-yellow)"
 vimcmd_symbol = "[◎](italic dimmed green)"
 
 [cmd_duration]
-format = "[\\[](fg:red)[⏱ $duration]($style)[\\]](fg:red)"
+format = "[─\\[](fg:red)[⏱ $duration]($style)[\\]](fg:red)"
 min_time = 1
 show_milliseconds = true
 style = "fg:yellow"
