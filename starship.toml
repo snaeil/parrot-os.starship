@@ -1,0 +1,177 @@
+add_newline = true
+continuation_prompt = "[▸▹ ](fg:red)"
+format = "$status$username[@](fg:purple)$hostname$jobs$cmd_duration$directory$kubernetes$hg_branch$pijul_channel$docker_context$package$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$gleam$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$quarto$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$zig$buf$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$nats$direnv$env_var$crystal$custom$sudo$battery$time$container$fill$git_branch$git_status$git_metrics$line_break[└──╼](fg:red)$character\n"
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[character]
+error_symbol = "[◎](bold bold bright-red)"
+success_symbol = "[◎](bold bold bright-yellow)"
+vimcmd_symbol = "[◎](italic dimmed green)"
+
+[cmd_duration]
+format = "[\\[](fg:red)[⏱ $duration]($style)[\\]](fg:red)"
+min_time = 1
+show_milliseconds = true
+style = "fg:yellow"
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+format = "[─\\[](fg:red)[$path]($style)[\\]](fg:red)"
+style = "fg:purple"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fill]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+format = "[$symbol$branch]($style)"
+style = "fg:bright-black italic dimmed"
+symbol = ""
+truncation_length = 14
+truncation_symbol = "⋯"
+
+[git_metrics]
+added_style = "italic dimmed green"
+deleted_style = "italic dimmed red"
+disabled = false
+format = "([▴$added]($added_style))([▿$deleted]($deleted_style))"
+ignore_submodules = true
+
+[git_status]
+ahead = "[▴│[${count}](bold white)│](italic green)"
+behind = "[▿│[${count}](bold white)│](italic red)"
+conflicted = "[◪◦](italic bright-magenta)"
+deleted = "[✕](italic red)"
+diverged = "[◇ ▴┤[${ahead_count}](regular white)│▿┤[${behind_count}](regular white)│](italic bright-magenta)"
+format = "([$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed]($style))"
+modified = "[●◦](italic yellow)"
+renamed = "[◎◦](italic bright-blue)"
+staged = "[▪┤[$count](bold white)│](italic bright-cyan)"
+stashed = "[◃◈](italic white)"
+style = "fg:yellow"
+untracked = "[◌◦](italic bright-yellow)"
+
+[golang]
+symbol = " "
+
+[gradle]
+format = "[$symbol$version ]($style)"
+style = "fg:bright-black"
+symbol = "[ 󰟆 ](fg:blue) "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style)[\\]](fg:red)"
+ssh_only = false
+style = "fg:cyan"
+
+[java]
+format = "[$symbol${version}]($style)"
+style = "fg:bright-black"
+symbol = "[ ](fg:#d65d0e)"
+
+[jobs]
+format = "[\\[](fg:red)[$symbol$number]($style)[\\]](fg:red)"
+style = "fg:bright-black"
+symbol = "⚙ "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+format = "[$symbol$state|$name]($style)"
+style = "fg:bright-black"
+symbol = "[ ](fg:blue)"
+
+[nodejs]
+format = "[$symbol${version} ]($style)"
+style = "fg:bright-black"
+symbol = "[ ](fg:green)"
+
+[ocaml]
+symbol = " "
+
+[package]
+format = "[  ](fg:cyan) [$version](fg:bright-black) "
+
+[python]
+format = "[$symbol${pyenv_prefix}(${version})(($virtualenv)) ]($style)"
+style = "fg:bright-black"
+symbol = "[ ](fg:cyan)"
+version_format = "v${major}.${minor}"
+
+[rust]
+format = "[${symbol}${version}]($style)"
+style = "fg:bright-black"
+symbol = "[ ](fg:yellow)"
+
+[status]
+disabled = false
+format = "[$symbol]($style)"
+style = "fg:red"
+success_symbol = "┌─"
+symbol = "💥"
+
+[username]
+format = "[\\[](fg:red)[$user]($style)"
+show_always = true
+style_root = "fg:red"
+style_user = "fg:green"
