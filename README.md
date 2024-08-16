@@ -14,6 +14,10 @@ Downloads the `parrot-os.toml` file and places it in your `~/.config/starship.to
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/snaeil/parrot-os.starship/main/starship.toml
 ```
 
+### Using nix home-manager
+
+Add the content of [starship.niy](./starship.nix) to your `home.nix` file.
+
 ## Credits
 
 - [Parrot OS](parrotsec.org) for the inspiration
