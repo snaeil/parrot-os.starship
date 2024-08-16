@@ -16,7 +16,7 @@ curl -o ~/.config/starship.toml https://raw.githubusercontent.com/snaeil/parrot-
 
 ### Using nix home-manager
 
-Add the content of [starship.niy](./starship.nix) to your `home.nix` file.
+Add the content of [starship.nix](./starship.nix) to your `home.nix` file.
 
 ## Credits
 
