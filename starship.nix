@@ -2,9 +2,8 @@ programs.starship = {
   enable = true;
   settings = {
     format = ''
-      $status$username[@](fg:purple)$hostname$jobs$cmd_duration$directory$kubernetes$hg_branch$pijul_channel$docker_context$package$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$gleam$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$quarto$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$zig$buf$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$nats$direnv$env_var$crystal$custom$sudo$battery$time$container$fill$git_branch$git_status$git_metrics$line_break[└──╼](fg:red)$character
+      $status$username[@](fg:purple)$hostname$jobs$cmd_duration$directory$git_branch$git_status$git_metrics$fill$kubernetes$hg_branch$pijul_channel$docker_context$package$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$gleam$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$quarto$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$zig$buf$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$nats$direnv$env_var$crystal$custom$sudo$battery$time$container$line_break[└──╼](fg:red)$character
     '';
-
     add_newline = true;
     aws = {
       symbol = "  ";
@@ -62,31 +61,31 @@ programs.starship = {
     };
     git_branch = {
       symbol = "";
-      style = "fg:bright-black italic dimmed";
-      format = "[$symbol$branch]($style)";
+      style = "fg:bright-red italic dimmed";
+      format = " [$symbol$branch ]($style)";
       truncation_symbol = "⋯";
-      truncation_length = 14;
+      truncation_length = 10;
     };
     git_status = {
-      style = "fg:yellow";
       format = "([$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed]($style))";
-      conflicted = "[◪◦](italic bright-magenta)";
-      ahead = "[▴│[\${count}](bold white)│](italic green)";
-      behind = "[▿│[\${count}](bold white)│](italic red)";
-      diverged = "[◇ ▴┤[\${ahead_count}](regular white)│▿┤[\${behind_count}](regular white)│](italic bright-magenta)";
-      untracked = "[◌◦](italic bright-yellow)";
-      stashed = "[◃◈](italic white)";
-      modified = "[●◦](italic yellow)";
-      staged = "[▪┤[$count](bold white)│](italic bright-cyan)";
-      renamed = "[◎◦](italic bright-blue)";
-      deleted = "[✕](italic red)";
+      ahead = "[󱎯 [\${count}](bold white)](italic green)";
+      behind = "[󱙷 [\${count}](bold white)](italic red)";
+      conflicted = "[ﲅ ](italic bright-magenta)";
+      deleted = "[󰩺 ](italic red)";
+      diverged = "[[\${ahead_count}](regular white)[\${behind_count}](regular white)](italic bright-magenta)";
+      modified = "[ ](italic yellow)";
+      renamed = "[ ](italic bright-blue)";
+      staged = "[󱤧 ](italic bright-cyan)";
+      stashed = "[ ](italic white)";
+      style = "fg:yellow";
+      untracked = "[󰘓 ](italic bright-yellow)";
     };
     git_metrics = {
       format = "([▴$added]($added_style))([▿$deleted]($deleted_style))";
       added_style = "italic dimmed green";
       deleted_style = "italic dimmed red";
-      ignore_submodules = true;
       disabled = false;
+      ignore_submodules = true;
     };
     golang = {
       symbol = " ";
